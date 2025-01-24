@@ -60,14 +60,10 @@ jobs:
         with:
           command: check
 
-      - name: Install worker-build
+      - name: Build by cargo
         uses: actions-rs/cargo@v1.0.3
         with:
-          command: install
-          args: worker-build --force
-
-      - name: Build by worker-build
-        run: worker-build
+          command: build
 
   release:
     name: Create Release
